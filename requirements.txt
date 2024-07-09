@@ -1,6 +1,8 @@
-pymongo==4.2.0
+pymongo
 numpy
 pandas 
 matplotlib
 seaborn
+scikit-learn
+xgboost
 -e .

@@ -3,4 +3,8 @@ Name: Calorie-Predictor-App
 Version: 0.0.1
 Author: Sushant Gangwar
 Author-email: gangwarsushant776@gmail.com
-Requires-Dist: pymongo
+Requires-Dist: pymongo==4.2.0
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
