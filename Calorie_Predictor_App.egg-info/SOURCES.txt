@@ -5,7 +5,6 @@ Calorie_Predictor_App.egg-info/SOURCES.txt
 Calorie_Predictor_App.egg-info/dependency_links.txt
 Calorie_Predictor_App.egg-info/requires.txt
 Calorie_Predictor_App.egg-info/top_level.txt
-Calories-Burnt-Predictor-/__init__.py
 src/__init__.py
 src/exception.py
 src/logger.py
