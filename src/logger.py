@@ -10,8 +10,8 @@ FINAL_PATH=os.path.join(LOG_FOLDER,LOG_FILE)
 
 logging.basicConfig(
 filename=FINAL_PATH,
-format="%(asctime)s - %(name)s - %(levelname)s - %(message)s,
-level=logging.INFO(),
+format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+level=logging.INFO,
 
 
 
