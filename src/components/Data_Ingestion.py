@@ -20,7 +20,7 @@ class ingestionmain:
     def splitting_data(self):
         logging.info("Ingestion Started")
         try:
-            df=pd.read_csv('projectfolder_Calories/datasets/calories.csv')
+            df=pd.read_csv('projectfolder_Calories/datasets/dataset.csv')
             logging.info("Read the Dataset")
             
             
