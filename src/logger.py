@@ -1,5 +1,4 @@
 import logging
-import sys 
 import os
 from datetime import datetime
 LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
@@ -10,7 +9,7 @@ FINAL_PATH=os.path.join(LOG_FOLDER,LOG_FILE)
 
 logging.basicConfig(
 filename=FINAL_PATH,
-format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
 level=logging.INFO,
 
 
