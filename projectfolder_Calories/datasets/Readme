@@ -1,0 +1,14 @@
+The Datasets here can be described as -: 
+1  Calories.csv = This Dataset Stores 2 columns, the UserID of a person and the corresponding Calories Burnt
+2  Exercise.csv = The Columns it contains are 8 describing readings of -  
+                DataSet Information 
+                1) USER_ID : Unique User_ID representing a Person recording their Information regarding various fields required to calculate Calories.
+                2) Gender : Categorical Column that shows Gender of that Person.
+                3) Age : Field showing the Age of that person.
+                4) Height : Entries for Physical Height of their body [in centimeters(cm)].
+                5) Weight : Column to record the weight of that person [in kilograms(kgs)].
+                6) Duration : Column that tells about the duration of their Workout Session (in minutes). 
+                7) Heart_Rate : This column tells us about the average HeartBeat Rate of that person during the Workout Session (in beats per minute (bpm)).
+                8) Body_Temp : This Column tells about the Temprature of that Person's Body After the Workout Session (in Degree Celsius (°C)).
+3 Dataset.csv = This Dataset includes Join of First 2 Datasets (Calories and Exercise) and Duplicate USER_ID column removed
+                
