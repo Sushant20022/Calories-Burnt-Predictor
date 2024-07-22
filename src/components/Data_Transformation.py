@@ -3,11 +3,12 @@ import sys
 import pandas as pd
 import numpy as np
 from dataclasses import dataclass
-from sklearn.model_selection import train_test_split
+
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
+
 from src.utils import save_object
 from src.logger import logging
 from src.exception import CustomException
@@ -53,7 +54,7 @@ class Transformer:
             test_dataset = pd.read_csv(test_path)
             logging.info("Train and Test Dataset Read Complete")
 
-            # Strip whitespace from columns
+           #Removing White Spaces
             train_dataset.columns = train_dataset.columns.str.strip()
             test_dataset.columns = test_dataset.columns.str.strip()
 
@@ -77,7 +78,7 @@ class Transformer:
 
             train_arr = np.c_[input_dataset_train_arr, np.array(target_col_train)]
             test_arr = np.c_[input_dataset_test_arr, np.array(target_col_test)]
-
+            
             logging.info("Saved preprocessing object.")
 
             save_object(
