@@ -8,6 +8,7 @@ from src.exception import CustomException
 from sklearn.metrics import r2_score
 from src.utils import save_object
 
+from sklearn.model_selection import GridSearchCV
 class TrainerConfig():
     model_obj_path=os.path.join("Artifacts","model.pkl")
 
@@ -25,8 +26,16 @@ class Trainer():
             test_arr[:,-1]
             )
             xgb=XGBRegressor()
+            param={
+                    'learning_rate':[.1,.01,.05,.001],
+                    'n_estimators': [8,16,32,64,128,256]
+                   }
+                    
+            gs = GridSearchCV(xgb,param,cv=3)
+            gs.fit(X_train,y_train)
 
-            xgb=xgb.fit(X_train,y_train)
+            xgb.set_params(**gs.best_params_)
+            xgb.fit(X_train,y_train)
             predicted=xgb.predict(X_test)
             r2=r2_score(y_test,predicted)
             save_object(
