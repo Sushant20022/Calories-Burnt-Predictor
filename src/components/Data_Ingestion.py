@@ -52,7 +52,7 @@ if __name__ == "__main__":
     test_data, train_data = obj.splitting_data()
 
     data_transformation = Transformer()
-    train_arr, test_arr, _ = data_transformation.start_transformation(train_data, test_data)
+    train_arr,test_arr,_ = data_transformation.start_transformation(train_data, test_data)
 
     model_train=Trainer()
     print(model_train.start_Training(train_arr,test_arr))

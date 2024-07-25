@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+        .container {
+            background-color: #ADD8E6;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #321;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input[type="text"], select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #74ebd5;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #acd6e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Your Workout Calorie Results!</h1>
+        <form action={{url_for('index')}} method="POST">
+            <label for="userId">Enter User ID:</label>
+            <input type="text" id="userId" name="userId" required>
+
+            <label for="gender">Select Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="age">Enter the Age:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="height">Enter your Height (cm):</label>
+            <input type="text" id="height" name="height" required>
+
+            <label for="weight">Enter your Weight (kg):</label>
+            <input type="text" id="weight" name="weight" required>
+
+            <label for="duration">Duration of Workout(minutes):</label>
+            <input type="text" id="duration" name="duration" required>
+
+            <label for="heartRate">Enter the Heart Rate(bpm):</label>
+            <input type="text" id="heartRate" name="heartRate" required>
+
+            <label for="bodyTemprature">Enter the Body Temperature(°C):</label>
+            <input type="text" id="bodyTemprature" name="bodyTemprature" required>
+
+            <input type="submit" value="Submit">
+        </form>
+<br>
+      <h2>The Estimated Calories burnt are : {{calories}}</h2>
+<br>
+    </div>
+
+</body>
+</html>
