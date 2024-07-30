@@ -21,7 +21,6 @@ class Prediction:
 
 class FormData:
     def __init__(self,
-    User_ID:int,
     Gender:str,
     Age: int,
     Height:float,
@@ -29,7 +28,7 @@ class FormData:
     Duration:float,
     Heart_Rate:float,
     Body_Temp:float ):
-        self.User_ID=User_ID
+        
         self.Gender=Gender
         self.Age=Age
         self.Height=Height
@@ -42,7 +41,6 @@ class FormData:
     def convert_to_Dataframe(self):
         try:
              custom_dict={
-             "User_ID":[self.User_ID],
              "Gender":[self.Gender],
              "Age":[self.Age],
              "Height":[self.Height],

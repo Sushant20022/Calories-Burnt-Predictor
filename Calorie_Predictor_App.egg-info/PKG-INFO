@@ -3,7 +3,6 @@ Name: Calorie-Predictor-App
 Version: 0.0.1
 Author: Sushant Gangwar
 Author-email: gangwarsushant776@gmail.com
-Requires-Dist: pymongo
 Requires-Dist: numpy
 Requires-Dist: pandas
 Requires-Dist: matplotlib
@@ -11,4 +10,5 @@ Requires-Dist: seaborn
 Requires-Dist: scikit-learn
 Requires-Dist: xgboost
 Requires-Dist: catboost
-Requires-Dist: dill
+Requires-Dist: Flask
+Requires-Dist: pickle

@@ -9,7 +9,7 @@ src/__init__.py
 src/exception.py
 src/logger.py
 src/utils.py
-src/Pipelines/Testing_Pipeline.py
+src/Pipelines/Predict_Pipeline.py
 src/Pipelines/Training_Pipeline.py
 src/Pipelines/__init__.py
 src/components/Data_Ingestion.py

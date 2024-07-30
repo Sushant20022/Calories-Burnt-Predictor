@@ -6,13 +6,12 @@ import pandas as pd
 
 app=Flask(__name__)
 
-@app.route('/predict',methods=['GET','POST'])
+@app.route('/',methods=['GET','POST'])
 def index():
     if request.method=='GET':
         return render_template('main.html')
     else:
         data=FormData(
-        User_ID=int(request.form['userId']),
         Gender=request.form['gender'],
         Age=int(request.form['age']),
         Height=float(request.form['height']),
@@ -27,14 +26,6 @@ def index():
         predict_pipeline=Prediction()
         result=predict_pipeline.predict(df)
         return render_template('main.html',calories=result[0])
-
-@app.route('/')
-def home():
-    return "<h1>This is the WEB APP to predict the Calories you Burnt</h1>"
-
-
-
-
 if __name__=="__main__":
     try:
         app.run(debug=True)

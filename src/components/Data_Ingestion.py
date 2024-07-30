@@ -28,7 +28,7 @@ class IngestionMain:
             logging.info("Read the Dataset")
 
             logging.info(f"Dataset columns: {df.columns.tolist()}")
-
+            df.drop(columns='User_ID',inplace=True)
             # Creating Train.csv Folder in directory
             os.makedirs(os.path.dirname(self.ingestion_path.train_data_path), exist_ok=True)
             df.to_csv(self.ingestion_path.original_data_path, index=False, header=True)

@@ -23,7 +23,7 @@ class Transformer:
 
     def TransformerFunction(self):
         try:
-            numerical_columns = ['User_ID', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp']
+            numerical_columns = ['Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp']
             categorical_columns = ['Gender']
             
             logging.info(f"Categorical columns: {categorical_columns}")
