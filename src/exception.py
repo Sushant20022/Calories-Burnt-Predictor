@@ -1,6 +1,5 @@
-# exception.py
 import sys
-
+import os
 # Function to generate a detailed error message
 def generate_error_message(error, error_detail:sys):
     _, _, exc_tb = sys.exc_info()

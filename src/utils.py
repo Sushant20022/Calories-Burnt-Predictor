@@ -1,7 +1,5 @@
 import os
 import sys
-
-
 import pickle
 
 from src.exception import CustomException
@@ -23,5 +21,5 @@ def load_object(file_path):
         with open(file_path,"rb") as obj:
          return pickle.load(obj)
     except Exception as e:
-        raise CustomException(e.sys)
+        raise CustomException(e,sys)
         
